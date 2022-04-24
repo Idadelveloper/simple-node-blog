@@ -4,6 +4,7 @@ const app = express();
 
 // register view engine
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 // listen for requests
 app.listen(3000);

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: 'Nunito', sans-serif;
+    max-width: 1200px;
+    background-color: #06113C;
+    color: #EEEEEE;
+}
+
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+nav li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+nav h1 {
+    font-size: 3rem;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+nav p,
+nav a {
+    color: #DDDDDD;
+    font-weight: 300;
+}
+
+footer {
+    color: #DDDDDD;
+    text-align: center;
+    margin: 20px auto;
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+h3 {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.content {
+    margin-left: 20px;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+
+.create-blog form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.create-blog input,
+.create-blog textarea {
+    display: block;
+    width: 100%;
+    margin: 10px;
+    padding: 8px;
+    background-color: #001E6C;
+    border-radius: 10px;
+    border: none;
+    color: #EEEEEE;
+}
+
+.create-blog label {
+    display: block;
+    margin-top: 24px;
+}
+
+textarea {
+    height: 120px;
+}
+
+.create-blog button {
+    margin: 20px auto;
+    background: #DDDDDD;
+    border-radius: 5px;
+    color: #001E6C;
+    padding: 6px 30px;
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.create-blog button:hover {
+    padding: 8px 32px;
+    font-size: 1.1rem;
+}
