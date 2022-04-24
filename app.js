@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const secrets = require('./secrets');
+const Blog = require('./models/blog')
 
 // express app
 const app = express();
@@ -21,13 +22,7 @@ app.use(morgan('dev'));
 
 // app routes
 app.get('/', (req, res) => {
-    const blogs = [
-        { title: "Getting started in open source", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { title: "Steps to becoming a Full Stack Developer", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { title: "My UNICEF internship experience", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
-    ]
-
-    res.render('index', { title: "Home", blogs });
+    res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
@@ -36,6 +31,17 @@ app.get('/about', (req, res) => {
 
 app.get('/about-us', (req, res) => {
     res.redirect('/about');
+})
+
+// blog routes
+app.get('/blogs', (req, res) => {
+    Blog.find().sort({ createdAt: -1 })
+        .then((result) => {
+            res.render('index', { title: "All Blogs", blogs: result })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 })
 
 app.get('/blogs/create', (req, res) => {
