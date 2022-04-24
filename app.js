@@ -11,11 +11,11 @@ app.listen(3000);
 app.get('/', (req, res) => {
     const blogs = [
         { title: "Getting started in open source", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { title: "Stept to becoming a Full Stack Developer", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { title: "Steps to becoming a Full Stack Developer", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
         { title: "My UNICEF internship experience", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
     ]
 
-    res.render('index', { title: "Home" });
+    res.render('index', { title: "Home", blogs });
 });
 
 app.get('/about', (req, res) => {
