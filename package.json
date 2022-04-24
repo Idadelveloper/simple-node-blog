@@ -1,0 +1,27 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "A simple blog application powered by node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Idadelveloper/node-blog-app.git"
+  },
+  "keywords": [
+    "node",
+    "blog"
+  ],
+  "author": "Ida Delphine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Idadelveloper/node-blog-app/issues"
+  },
+  "homepage": "https://github.com/Idadelveloper/node-blog-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3"
+  }
+}
