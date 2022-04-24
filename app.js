@@ -2,7 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const secrets = require('./secrets');
-const Blog = require('./models/blog')
+const Blog = require('./models/blog');
+const { render } = require('ejs');
 
 // express app
 const app = express();
@@ -61,6 +62,18 @@ app.get('/blogs/create', (req, res) => {
     res.render('create', { title: "Create Blog" });
 })
 
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    Blog.findById(id)
+        .then((result) => {
+            res.render('details', { blog: result, title: "Blog Details" })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+})
+
+// 404 page
 app.use((req, res) => {
     res.status(404).render('404', { title: "Not Found" });
 })
