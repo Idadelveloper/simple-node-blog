@@ -90,6 +90,25 @@ h3 {
     color: #035397;
 }
 
+.details {
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+    color: #06113C;
+    background-color: #DDDDDD;
+}
+
+.delete:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 3px #e4ebf1;
+}
+
 .heading {
     font-size: 1.5rem;
 }
